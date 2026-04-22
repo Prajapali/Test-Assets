@@ -1,0 +1,41 @@
+First it has to be created using init means local folder connected to gitHub
+
+Example: 
+PS C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets> git init
+Initialized empty Git repository in C:/CBC/DSAI/04-NOSQL/MyNotes/Test-Assets/.git/
+PS C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets> echo "# Test-Assets" > README.md
+PS C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets> git add README.md
+PS C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets> git branch -M main
+PS C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets> git remote add origin https://github.com/Prajapali/Test-Assets.git
+PS C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets> git push -u origin main
+
+
+It is always best to check status
+Note : need to be in the folder
+
+Example:
+PS C:\CBC\DSAI\04-NOSQL\MyNotes> cd .\Test-Assets\
+PS C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets> dir
+
+
+    Directory: C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2026-04-21   2:05 PM             32 README.md
+
+
+PS C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets>  git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Now you can run git pull origin main --allow-unrelated-histories
+
+Example:PS C:\CBC\DSAI\04-NOSQL\MyNotes\Test-Assets> git pull origin main --allow-unrelated-histories
+From https://github.com/Prajapali/Test-Assets
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
